@@ -11,9 +11,6 @@ body, h1, p, label, select, input {
 
 /* Body styling */
 body {
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #f06, #f79);
-  color: #333;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,6 +19,7 @@ body {
   padding: 20px;
   box-sizing: border-box;
 }
+
 
 /* T-Shirt container styling */
 .tshirt-container {
@@ -91,12 +89,11 @@ label {
   margin-top: 15px;
   display: block;
   text-align: center;
-  color: #fff;
 }
 
 select, input[type="file"] {
   margin-top: 10px;
-  padding: 10px;
+  padding: 8px; /* Reduce padding for smaller screens */
   width: 100%;
   max-width: 250px;
   border: none;
@@ -104,6 +101,7 @@ select, input[type="file"] {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
 }
+
 
 select:hover, input[type="file"]:hover {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
@@ -119,12 +117,14 @@ kbd {
 /* Responsive styling */
 @media (max-width: 600px) {
   .tshirt {
-      width: 100%;
+      width: 90%; /* Adjust as needed */
+      max-width: 300px; /* Limit width for smaller screens */
+      padding-right: 90px;
   }
 
   canvas {
       width: 100%;
-      height: auto;
+      height: auto; /* Ensures canvas scales proportionally */
   }
 }
 
